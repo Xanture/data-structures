@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace strings
 {
@@ -6,7 +7,13 @@ namespace strings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string input = Console.ReadLine();
+            string output = "";
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                output += input[i];
+            }
+            Console.WriteLine(output);
         }
     }
 }
