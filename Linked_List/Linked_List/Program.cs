@@ -6,7 +6,11 @@ namespace Linked_List
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LinkedList linkList = new LinkedList();
+
+            linkList.AddAtLast(12);
+            linkList.AddAtLast(13);
+            linkList.PrintAllNodes();
         }
     }
 }
