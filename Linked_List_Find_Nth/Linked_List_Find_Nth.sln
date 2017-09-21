@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linked_List_Find_Nth", "Linked_List_Find_Nth\Linked_List_Find_Nth.csproj", "{EA067D19-1D06-4AF1-B556-15AC698AD164}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA067D19-1D06-4AF1-B556-15AC698AD164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA067D19-1D06-4AF1-B556-15AC698AD164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA067D19-1D06-4AF1-B556-15AC698AD164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA067D19-1D06-4AF1-B556-15AC698AD164}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC2D6CF2-91CE-42C6-BF26-F1D58240F57B}
+	EndGlobalSection
+EndGlobal
