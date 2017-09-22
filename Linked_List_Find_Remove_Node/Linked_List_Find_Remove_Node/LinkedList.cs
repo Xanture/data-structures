@@ -101,7 +101,7 @@ namespace Linked_List_Find_Remove_Node
                 Console.Write(curr2.Data);
                 Console.Write("->");
             }
-            Console.Write("Tail!");
+            Console.Write("Tail!!");
         }
 
     }
