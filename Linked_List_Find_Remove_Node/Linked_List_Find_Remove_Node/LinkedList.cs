@@ -32,11 +32,13 @@ namespace Linked_List_Find_Remove_Node
         {
             Console.Write("Head ->");
             Node curr = head;
+            Console.Write(curr.Data);
             while (curr.Next != null)
             {
                 curr = curr.Next;
-                Console.Write(curr.Data);
                 Console.Write("->");
+                Console.Write(curr.Data);
+
             }
             Console.Write("<----You've steped on my tail");
         }
@@ -66,7 +68,7 @@ namespace Linked_List_Find_Remove_Node
             while (start < midCount)
             {
                 curr = curr.Next;
-                Console.Write(curr.Data);
+                Console.Write(curr.Data.ToString());
                 Console.Write("->");
                 start++;
             }
@@ -77,31 +79,27 @@ namespace Linked_List_Find_Remove_Node
 
         public void Remove(int nodeToRemove)
         {
-            int index = nodeToRemove - 1;
             Console.Write("Head ->");
             Node curr = head;
             Node curr2 = head;
-            int innerCount = 0;
 
-            while (curr.Next != null)
+            do
             {
+                if (nodeToRemove.Equals(curr.Data))
+                {
+                    curr2 = curr;
+                    curr2 = null;
+                    curr = curr.Next;
+
+                }
+                Console.Write(curr.Data);
                 curr = curr.Next;
-                innerCount++;
-            }
-            for (int i = 0; i < count - nodeToRemove; i++)
-            {
-                curr2 = curr2.Next;
-                Console.Write(curr2.Data);
                 Console.Write("->");
+
             }
-            curr2 = curr2.Next;
-            for (int i = 0; i < index - 1; i++)
-            {
-                curr2 = curr2.Next;
-                Console.Write(curr2.Data);
-                Console.Write("->");
-            }
-            Console.Write("Tail!!");
+            while (curr != null) ;
+            Console.Write("<----Tail");
+
         }
 
     }
