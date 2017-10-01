@@ -12,6 +12,8 @@ namespace Queuefromtwostacks
             queue.stack1.Push(4);
 
             queue.Dequeue();
+
+            queue.View();
         }
     }
 }

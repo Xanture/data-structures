@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace stackandque
 {
     partial class Program
     {
-        class Stack<T>
+        class Stack<T> : List<T>
         {
             public Node<T> Head { get; set; }
             public Node<T> Tail { get; set; }

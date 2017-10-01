@@ -6,17 +6,16 @@ namespace stackandque
     {
         static void Main(string[] args)
         {
-            Stack<int> newStack = new Stack<int>(1);
+            Stack<int> newStack = new Stack<int>(2);
             newStack.Push(2);
             newStack.Push(3);
-            newStack.Push(4);
-            newStack.Push(5);
-            newStack.Push(6);
+            newStack.Push(3);
+            newStack.Push(12);
             newStack.Push(7);
+            newStack.Push(14);
 
             newStack.View();
 
-            newStack.Pop();
 
             Console.WriteLine();
             newStack.View();
