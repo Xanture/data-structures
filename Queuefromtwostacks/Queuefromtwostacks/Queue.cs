@@ -38,12 +38,7 @@ namespace Queuefromtwostacks
 
         public void View()
         {
-            Node curr = Head;
-            while (curr != null)
-            {
-                Console.WriteLine(curr.Data);
-                curr = curr.Next;
-            }
+           stack1.View();
         }
     }
 
