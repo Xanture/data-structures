@@ -17,6 +17,7 @@ namespace PostPreORDER
 
             string InOrderString = "";
             tree.InOrder(root, ref InOrderString);
+            Console.WriteLine("Press AnyKey for PostOrderListz with a Z");
             Console.ReadLine();
             string PostOrderString = "";
             tree.PostOrder(root, ref PostOrderString);
