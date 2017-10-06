@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PostPreORDER
+namespace BreadthFirst
 {
     class Node
     {
@@ -16,5 +16,6 @@ namespace PostPreORDER
             Left = null;
             Right = null;
         }
+
     }
 }

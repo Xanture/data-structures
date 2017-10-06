@@ -7,14 +7,14 @@ namespace PostPreORDER
 {
     class Tree
     {
-        public Leaf root;
+        public Node root;
 
-        public Tree(Leaf data)
+        public Tree(Node data)
         {
             root = data;
         }
 
-        public void InOrder(Leaf L, ref string s)
+        public void InOrder(Node L, ref string s)
         {
             if (L.Left != null)
             {
@@ -31,7 +31,7 @@ namespace PostPreORDER
             }
             Console.WriteLine(s);
         }
-        public void PostOrder(Leaf L, ref string s)
+        public void PostOrder(Node L, ref string s)
         {
             if (L.Left != null)
             {

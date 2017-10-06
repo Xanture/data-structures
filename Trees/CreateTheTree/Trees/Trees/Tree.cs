@@ -8,9 +8,9 @@ namespace Trees
 {
     class Tree
     {
-        public Leaf root;
+        public Node root;
 
-        public Tree(Leaf data)
+        public Tree(Node data)
         {
             root = data;
         }

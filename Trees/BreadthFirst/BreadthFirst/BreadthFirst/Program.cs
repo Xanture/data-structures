@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PostPreORDER
+namespace BreadthFirst
 {
     class Program
     {
@@ -15,13 +15,10 @@ namespace PostPreORDER
             root.Left.Left = new Node(6);
             root.Left.Right = new Node(7);
 
-            string InOrderString = "";
-            tree.InOrder(root, ref InOrderString);
-            Console.WriteLine("Press AnyKey for PostOrderListz with a Z");
-            Console.ReadLine();
-            string PostOrderString = "";
-            tree.PostOrder(root, ref PostOrderString);
+            string startString = "";
+            tree.BreadthFirstPrint(root);
 
+            Console.Read();
         }
     }
 }

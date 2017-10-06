@@ -7,14 +7,14 @@ namespace TreeTransveral
 {
     class Tree
     {
-        public Leaf root;
+        public Node root;
 
-        public Tree(Leaf data)
+        public Tree(Node data)
         {
             root = data;
         }
 
-        public void PrintTree(Leaf L, ref string s)
+        public void PrintTree(Node L, ref string s)
         {
             if (L.Left != null)
             {
