@@ -6,14 +6,14 @@ namespace PostPreORDER
     {
         static void Main(string[] args)
         {
-            Leaf root = new Leaf(1);
+            Node root = new Node(1);
             Tree tree = new Tree(root);
-            root.Right = new Leaf(2);
-            root.Left = new Leaf(3);
-            root.Right.Right = new Leaf(4);
-            root.Right.Left = new Leaf(5);
-            root.Left.Left = new Leaf(6);
-            root.Left.Right = new Leaf(7);
+            root.Right = new Node(2);
+            root.Left = new Node(3);
+            root.Right.Right = new Node(4);
+            root.Right.Left = new Node(5);
+            root.Left.Left = new Node(6);
+            root.Left.Right = new Node(7);
 
             string InOrderString = "";
             tree.InOrder(root, ref InOrderString);
