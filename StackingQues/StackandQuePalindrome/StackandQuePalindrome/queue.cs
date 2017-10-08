@@ -17,9 +17,10 @@ namespace StackandQuePalindrome
 
         public void Enqueue(string data)
         {
-            Tail.Prev = Head;
+            Node buffer = Tail;
             Tail.Next = new Node(data);
             Tail = Tail.Next;
+            Tail.Prev = buffer;
         }
 
         public string IsPalindrome()
