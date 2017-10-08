@@ -67,35 +67,29 @@ namespace SortedStack
         {
             Stack filter = new Stack();
             Stack queue = new Stack();
-            bool checker = false;
 
-            do
+
+            filter.Push(stackData.Pop());
+            while (stackData.Head != null)
             {
-                Node temp = stackData.Head;
-                if (temp.Next == null  || temp.Data <= temp.Next.Data)
+                if (filter.Head.Data >= stackData.Head.Data)
                 {
-                    temp = Head.Next;
+                    queue.Push(filter.Pop());
                     filter.Push(stackData.Pop());
                 }
                 else
                 {
                     queue.Push(stackData.Pop());
                 }
-            } while (stackData.Head != null);
-            if (queue.Head == null)
-            {
-                checker = true;
+                if (stackData.Head == null)
+                {
+                    while (queue.Head != null)
+                    {
+                        stackData.Push(queue.Pop());
+                    }
+                    filter.Push(stackData.Pop());
+                }
             }
-            while (queue.Head != null)
-            {
-                filter.Push(queue.Pop());
-            }
-            while (checker == false)
-            {
-                filter.SortThisStackMeow(filter);
-            }
-
-
             filter.View();
         }
     }
