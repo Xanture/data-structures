@@ -12,9 +12,13 @@ namespace SortedStack
             stack.Push(1);
             stack.Push(4);
             stack.Push(6);
+            stack.Push(1);
 
-            stack.View();
+            //stack.View();
 
+            Console.WriteLine();
+
+            stack.SortThisStackMeow(stack);
         }
     }
 }
