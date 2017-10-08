@@ -37,7 +37,7 @@ namespace StackandQuePalindrome
                 }
                 else
                 {
-                    return "Get Rekd (Not an Palindrome)";
+                    return "Get Rekd (Not an Palindrome)"; 
                 }
             }
             return "You win! (Is an Palindrome)";
