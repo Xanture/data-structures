@@ -34,6 +34,12 @@ namespace DLinkedLIst
             Console.WriteLine("AddBefore: Target Node 4 adding 8 before");
             dLinked.AddBefore(node4, 8);
             dLinked.View();
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Delete: Target Node 7 for MAXIMUM DELETION");
+            dLinked.Delete(7);
+            dLinked.View();
+            Console.WriteLine("\n\n Thanks for grading!");
 
             Console.Read();
         }

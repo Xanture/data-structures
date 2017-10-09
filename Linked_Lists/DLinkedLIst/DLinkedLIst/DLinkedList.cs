@@ -92,6 +92,21 @@ namespace DLinkedLIst
             curr.Prev = newNode;
         }
 
+        public int Delete(int target)
+        {
+            Node curr = Head;
+            while (!curr.Data.Equals(target))
+            {
+                curr = curr.Next;
+            }
+            int temp = curr.Data;
+            curr.Prev.Next = curr.Next;
+            curr.Next = curr.Prev;
+            curr.Next = null;
+            curr.Prev = null;
+            return curr.Data;
+        }
+
         public void View()
         {
             Console.Write("Head«-»");
