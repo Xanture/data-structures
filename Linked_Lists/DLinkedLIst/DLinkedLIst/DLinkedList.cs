@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace DLinkedLIst
@@ -54,6 +55,26 @@ namespace DLinkedLIst
             Head = data;
             Head.Next.Prev = Head;
         }
+
+        public void AddAfter(Node target, int data)
+        {
+            if (Head == null)
+            {
+                Head = new Node(data);
+            }
+            Node newNode = new Node(data);
+            Node curr = Head;
+            while (curr != target)
+            {
+                curr = curr.Next;
+            }
+            newNode.Next = curr.Next;
+            newNode.Prev = curr;
+            curr.Next.Prev = newNode;
+            curr.Next = newNode;
+        }
+
+
 
         public void View()
         {
