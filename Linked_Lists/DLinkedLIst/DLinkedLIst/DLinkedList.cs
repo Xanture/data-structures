@@ -74,7 +74,23 @@ namespace DLinkedLIst
             curr.Next = newNode;
         }
 
-
+        public void AddBefore(Node target, int data)
+        {
+            if (Head == null)
+            {
+                Head = new Node(data);
+            }
+            Node newNode = new Node(data);
+            Node curr = Head;
+            while (curr != target)
+            {
+                curr = curr.Next;
+            }
+            newNode.Next = curr.Prev.Next;
+            newNode.Prev = curr.Prev;
+            curr.Prev.Next = newNode;
+            curr.Prev = newNode;
+        }
 
         public void View()
         {

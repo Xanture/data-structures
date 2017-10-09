@@ -17,11 +17,22 @@ namespace DLinkedLIst
             dLinked.AddLast(node3);
             dLinked.AddLast(node4);
 
-            dLinked.AddFirst(new Node(2));
-
-            dLinked.AddAfter(node3, 7);
-
+            Console.WriteLine("Base List:");
             dLinked.View();
+            Console.WriteLine("\n");
+
+            Console.WriteLine("AddFirst: 2 Before 1");
+            dLinked.AddFirst(new Node(2));
+            dLinked.View();
+            Console.WriteLine("\n");
+
+            Console.WriteLine("AddAfter: Target Node 3, adding 7 after");
+            dLinked.AddAfter(node3, 7);
+            dLinked.View();
+            Console.WriteLine("\n");
+
+            Console.WriteLine("AddBefore: Target Node 4 adding 8 after");
+            dLinked.AddAfter(node4, 8);
 
             Console.Read();
         }
