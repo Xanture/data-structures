@@ -38,6 +38,7 @@ namespace DLinkedLIst
                     curr = curr.Next;
                 }
                 curr.Next = data;
+                data.Prev = curr;
                 curr.Next.Prev = curr;
             }
  

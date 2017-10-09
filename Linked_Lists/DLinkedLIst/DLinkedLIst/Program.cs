@@ -13,6 +13,9 @@ namespace DLinkedLIst
 
             DLinkedList dLinked = new DLinkedList();
             dLinked.AddLast(node1);
+            dLinked.AddLast(node2);
+            dLinked.AddLast(node3);
+            dLinked.AddLast(node4);
         }
     }
 }
