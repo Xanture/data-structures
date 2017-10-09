@@ -19,6 +19,8 @@ namespace DLinkedLIst
 
             dLinked.AddFirst(new Node(2));
 
+            dLinked.View();
+
             Console.Read();
         }
     }

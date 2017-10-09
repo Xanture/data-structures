@@ -14,9 +14,9 @@ namespace DLinkedLIst
            Head = null;
         }
 
-        public DLinkedList(int Data)
+        public DLinkedList(int data)
         {
-            Head = new Node(Data);
+            Head = new Node(data);
         }
 
         public DLinkedList(Node data)
@@ -53,6 +53,19 @@ namespace DLinkedLIst
             data.Prev = Head;
             Head.Next.Prev = data;
             Head.Next = data;
+        }
+
+        public void View()
+        {
+            Console.Write("Head«-»");
+            Node curr = Head;
+            while (curr.Next != null)
+            {
+                Console.Write(curr.Data);
+                curr = curr.Next;
+                Console.Write("«-»");
+            }
+            Console.Write(curr.Data);
         }
     }
 }
