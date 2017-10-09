@@ -49,10 +49,10 @@ namespace DLinkedLIst
             {
                 Head = new Node(data.Data);
             }
-            data.Next = Head.Next;
-            data.Prev = Head;
+            data.Next = Head;
             Head.Next.Prev = data;
-            Head.Next = data;
+            Head = data;
+            Head.Next.Prev = Head;
         }
 
         public void View()
