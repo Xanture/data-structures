@@ -105,7 +105,7 @@ namespace DLinkedLIst
             curr.Next = curr.Prev;
             curr.Next = null;
             curr.Prev = null;
-            return curr.Data;
+            return temp;
         }
 
         public void View()
