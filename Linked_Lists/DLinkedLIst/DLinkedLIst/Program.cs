@@ -31,8 +31,9 @@ namespace DLinkedLIst
             dLinked.View();
             Console.WriteLine("\n");
 
-            Console.WriteLine("AddBefore: Target Node 4 adding 8 after");
-            dLinked.AddAfter(node4, 8);
+            Console.WriteLine("AddBefore: Target Node 4 adding 8 before");
+            dLinked.AddBefore(node4, 8);
+            dLinked.View();
 
             Console.Read();
         }
