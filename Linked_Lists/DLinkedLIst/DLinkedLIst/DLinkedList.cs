@@ -41,7 +41,18 @@ namespace DLinkedLIst
                 data.Prev = curr;
                 curr.Next.Prev = curr;
             }
- 
+        }
+
+        public void AddFirst(Node data)
+        {
+            if (Head == null)
+            {
+                Head = new Node(data.Data);
+            }
+            data.Next = Head.Next;
+            data.Prev = Head;
+            Head.Next.Prev = data;
+            Head.Next = data;
         }
     }
 }

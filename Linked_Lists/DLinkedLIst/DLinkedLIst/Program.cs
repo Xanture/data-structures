@@ -16,6 +16,10 @@ namespace DLinkedLIst
             dLinked.AddLast(node2);
             dLinked.AddLast(node3);
             dLinked.AddLast(node4);
+
+            dLinked.AddFirst(new Node(2));
+
+            Console.Read();
         }
     }
 }
