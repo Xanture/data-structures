@@ -10,6 +10,7 @@ namespace DLinkedLIst
     {
         public Node Head;
 
+        //Three differnt overloads All work
         public DLinkedList()
         {
            Head = null;
@@ -95,7 +96,7 @@ namespace DLinkedLIst
         public int Delete(int target)
         {
             Node curr = Head;
-            while (!curr.Data.Equals(target))
+            while (!curr.Data.Equals(target) && curr.Next != null)
             {
                 curr = curr.Next;
             }
