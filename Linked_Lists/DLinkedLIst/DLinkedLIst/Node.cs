@@ -10,6 +10,11 @@ namespace DLinkedLIst
         public Node Next { get; set; }
         public Node Prev { get; set; }
 
+        public Node()
+        {
+            Next = null;
+            Prev = null;
+        }
         public Node(int data)
         {
             Data = data;
