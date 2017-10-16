@@ -9,6 +9,10 @@ namespace BinarySearchTree
     {
         public Node Root;
 
+        protected BST()
+        {
+        }
+
         public BST(int data)
         {
             Root = new Node(data);
@@ -39,6 +43,20 @@ namespace BinarySearchTree
                         break;
                     }
                 }
+            }
+        }
+
+        public void Traverse()
+        {
+            Node curr = Root;
+            if (curr.Left != null)
+            {
+                curr.Left.Traverse();
+            }
+            Console.Write(curr.Data);
+            if (curr.Right != null)
+            {
+                curr.Right.Traverse();
             }
         }
     }
