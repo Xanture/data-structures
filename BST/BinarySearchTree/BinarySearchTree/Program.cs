@@ -14,6 +14,8 @@ namespace BinarySearchTree
             bst.Add(40);
             bst.Add(35);
             bst.Add(45);
+
+            bst.Traverse();
         }
     }
 }
