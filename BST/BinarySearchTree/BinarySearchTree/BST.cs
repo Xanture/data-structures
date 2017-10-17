@@ -46,6 +46,16 @@ namespace BinarySearchTree
             }
         }
 
+        public Node FindMin(Node currRoot)
+        {
+            while (currRoot.Left != null)
+            {
+                currRoot = currRoot.Left;
+            }
+            Console.WriteLine(currRoot.Data);
+            return currRoot;
+        }
+
         public void Traverse(Node currRoot)
         {
             if (currRoot != null)

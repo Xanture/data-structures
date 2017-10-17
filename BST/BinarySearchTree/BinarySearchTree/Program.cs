@@ -17,6 +17,7 @@ namespace BinarySearchTree
             bst.Traverse(bst.Root);
             Console.WriteLine();
             bst.TopDown(bst.Root);
+            Console.WriteLine();
 
             Console.Read();
         }
