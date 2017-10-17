@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Transactions;
 
 namespace BinarySearchTree
 {
     class BST
     {
         public Node Root;
-        protected BST()
-        {
-        }
+        public Node curr;
 
         public BST(int data)
         {
-            Node Root = new Node(data);
+            Node newNode = new Node(data);
+            Root = newNode;
         }
 
         public void Add(int data)
         {
-            Node curr = Root;
+            curr = Root;
             Node newNode = new Node(data);
             while (true)
             {
@@ -45,18 +46,15 @@ namespace BinarySearchTree
             }
         }
 
-//        public void Traverse()
-//        {
-//            Node curr = Root;
-//            if (curr.Left != null)
-//            {
-//                
-//            }
-//            Console.Write(curr.Data);
-//            if (curr.Right != null)
-//            {
-//                
-//            }
-//        }
+        public void Traverse(Node currRoot)
+        {
+            if (currRoot != null)
+            {
+                Traverse(currRoot.Left);
+                Console.Write(currRoot.Data);
+                Traverse(currRoot.Right);
+            }
+            Console.Write(curr.Data);
+        }
     }
 }
