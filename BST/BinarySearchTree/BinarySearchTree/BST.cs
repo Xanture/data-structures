@@ -51,10 +51,9 @@ namespace BinarySearchTree
             if (currRoot != null)
             {
                 Traverse(currRoot.Left);
-                Console.Write(currRoot.Data);
+                Console.Write($"<-{currRoot.Data}->");
                 Traverse(currRoot.Right);
             }
-            Console.Write(curr.Data);
         }
     }
 }
