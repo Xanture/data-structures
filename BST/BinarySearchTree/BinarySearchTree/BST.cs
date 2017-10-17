@@ -55,5 +55,15 @@ namespace BinarySearchTree
                 Traverse(currRoot.Right);
             }
         }
+
+        public void TopDown(Node currRoot)
+        {
+            if (currRoot != null)
+            {
+                Console.Write($"<-{currRoot.Data}->");
+                TopDown(currRoot.Left);
+                TopDown(currRoot.Right);
+            }
+        }
     }
 }
