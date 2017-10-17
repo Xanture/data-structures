@@ -52,6 +52,15 @@ namespace BinarySearchTree
             {
                 currRoot = currRoot.Left;
             }
+            return currRoot;
+        }
+
+        public Node FindMax(Node currRoot)
+        {
+            while (currRoot.Right != null)
+            {
+                currRoot = currRoot.Right;
+            }
             Console.WriteLine(currRoot.Data);
             return currRoot;
         }
