@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Transactions;
 
 namespace BinarySearchTree
 {
     class BST
     {
         public Node Root;
-        protected BST()
-        {
-        }
+        public Node curr;
 
         public BST(int data)
         {
-            Node Root = new Node(data);
+            Node newNode = new Node(data);
+            Root = newNode;
         }
 
         public void Add(int data)
         {
-            Node curr = Root;
+            curr = Root;
             Node newNode = new Node(data);
             while (true)
             {
@@ -45,18 +46,43 @@ namespace BinarySearchTree
             }
         }
 
-//        public void Traverse()
-//        {
-//            Node curr = Root;
-//            if (curr.Left != null)
-//            {
-//                
-//            }
-//            Console.Write(curr.Data);
-//            if (curr.Right != null)
-//            {
-//                
-//            }
-//        }
+        public Node FindMin(Node currRoot)
+        {
+            while (currRoot.Left != null)
+            {
+                currRoot = currRoot.Left;
+            }
+            return currRoot;
+        }
+
+        public Node FindMax(Node currRoot)
+        {
+            while (currRoot.Right != null)
+            {
+                currRoot = currRoot.Right;
+            }
+            Console.WriteLine(currRoot.Data);
+            return currRoot;
+        }
+
+        public void Traverse(Node currRoot)
+        {
+            if (currRoot != null)
+            {
+                Traverse(currRoot.Left);
+                Console.Write($"<-{currRoot.Data}->");
+                Traverse(currRoot.Right);
+            }
+        }
+
+        public void TopDown(Node currRoot)
+        {
+            if (currRoot != null)
+            {
+                Console.Write($"<-{currRoot.Data}->");
+                TopDown(currRoot.Left);
+                TopDown(currRoot.Right);
+            }
+        }
     }
 }
