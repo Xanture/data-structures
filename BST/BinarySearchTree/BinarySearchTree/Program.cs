@@ -18,7 +18,6 @@ namespace BinarySearchTree
             Console.WriteLine();
             bst.TopDown(bst.Root);
             Console.WriteLine();
-            bst.FindMax(bst.Root);
 
             Console.Read();
         }
